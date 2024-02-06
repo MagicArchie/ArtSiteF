@@ -1,0 +1,392 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('materials/images/background1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-image {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../materials/images/SimpleBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.transparent-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8%; 
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.transparent-line button {
+    margin-right: -3.5%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 1% 3%;
+    font-size: 1.6vw;
+    font-family: serif;
+    transition: color 0.3s;
+}
+
+.transparent-line button:first-child {
+    margin-right: 30%;
+}
+
+.transparent-line button:first-child:hover {
+    color: #9c9c9c;
+}
+
+main {
+    margin: 8% 0;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    text-align: left;
+    font-size: 1.8vw;
+    font-family: serif;
+    color: white; 
+    position: absolute;
+    top: 12%; 
+    left: 3%; 
+}
+
+header h1 {
+    margin: 0; 
+    font-size: 2.5vw; 
+}
+
+header p {
+    color: white; 
+    margin: 0vw; 
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    font-size: 1vw;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: white;
+}
+
+.instagram-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    transform: translate(-46%, 0%);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.instagram-button img {
+    width: 8%;
+}
+
+.transparent-line {
+    margin-right: -3.5%;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    color: white;  
+    font-size: 1.6vw;
+    font-family: serif;
+    transition: color 0.3s;
+}
+
+.transparent-line :hover {
+    color: #3b3b3b;
+}
+
+.transparent-line button:nth-child(5) {
+    color: grey !important;
+}
+
+.bottom-line {
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    width: 20%;
+    height: 6%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 0 10px 5px #454343;
+}
+
+#menu-icon {
+    display: none;
+}
+
+#slideshow-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+}
+
+.slide {
+    text-align: center;
+}
+
+img {
+    width: 70%; 
+    height: auto;
+    display: inline-block;
+}
+
+.arrow {
+    width: 5vw; 
+    height: auto; 
+    cursor: pointer;
+}
+
+.next-arrow {
+    position: fixed;
+    top: 50%;
+    right: 25%; 
+    transform: translateY(-50%);
+}
+
+.prev-arrow {
+    position: fixed;
+    top: 50%;
+    left: 25%; 
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-image: none;
+    }
+
+    .transparent-line button {
+        font-size: 4.5vw;
+        margin-top: 5px;
+    }
+
+    .bottom-line {
+        left: 30%;
+        width: 40%;
+    }
+	
+	header {
+		text-align: left;
+		font-size: 4vw; 
+		font-family: serif;
+		color: white; 
+		position: absolute;
+		top: 12%; 
+		left: 5%; 
+	}
+
+	header h1 {
+		margin: 0; 
+		font-size: 5.5vw; 
+	}
+
+	header p {
+		color: white; 
+		margin: 0vw; 
+	}
+
+    .transparent-line {
+        margin-right: -3.5%;
+        background-color: transparent;
+        text-decoration: none;
+        border: none;
+        color: white;
+        font-size: 3vw;
+        font-family: serif;
+        transition: color 0.3s;
+    }
+
+    .transparent-line :hover {
+        color: grey;
+    }
+    
+    .transparent-line button.first-button {
+        display: block;
+        font-size: 5vw;
+    }
+
+    .transparent-line button:not(.first-button) {
+        display: none;
+    }
+    
+    footer {
+        font-size: 3.5vw; 
+        color: white;
+    }
+
+    #menu-icon {
+        display: block;
+        position: fixed;
+        top: 7px;
+        right: 10px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        z-index: 2;
+        outline: none;
+    }
+
+    #menu-icon img {
+        width: 6.5vw;
+    }
+
+    #mobile-menu-btn:checked + .transparent-line a {
+        display: block;
+    }
+
+    .transparent-line {
+        height: 6%; 
+    }
+
+    .instagram-button {
+        position: fixed;
+        bottom: 1vw;
+        left: 10vw;
+        transform: translate(-46%, 0%);
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    
+    .instagram-button img {
+        width: 20%; 
+    }
+
+    .transparent-line {
+        margin-right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        padding: 10px;
+        font-size: 3vw;
+        font-family: serif;
+        transition: color 0.3s;
+    }
+
+    .transparent-line :hover {
+        color: #449fbb;
+    }
+    
+    .dark-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000; 
+    }
+    
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw; 
+        padding: 20px; 
+        margin-top: 20.5vw;
+    }
+
+    .buttons-container button {
+        margin-right: -3.5%;
+        background-color: transparent;
+        border: none;
+        font-size: 6.5vw;
+        font-family: serif;
+        transition: color 0.3s;
+        color: #fff; 
+        padding: 10px;
+        cursor: pointer;
+        text-align: center; 
+    }
+
+    .buttons-container button img {
+        width: 7.5vw; 
+        height: auto; 
+    }
+
+    .buttons-container button:hover {
+        background-color: rgba(0, 0, 0, 0.2); 
+    }
+    
+    .buttons-container a {
+        background-color: transparent;
+        text-decoration: none;
+        border: none;
+        color: white;  
+        font-size: 5.6vw;
+        font-family: serif;
+        transition: color 0.3s;
+        margin-bottom: 4.5vw;
+    }
+
+    .buttons-container a:hover {
+        color: white;
+    }
+	
+	#slideshow-container {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 95%;
+		max-width: 800px;
+	}
+
+	.slide {
+		text-align: center;
+	}
+
+	img {
+		width: 100%; 
+		height: auto;
+		display: inline-block;
+	}
+
+	.arrow {
+		width: 15vw; 
+		height: auto; 
+		cursor: pointer;
+	}
+
+	.next-arrow {
+		position: fixed;
+		top: 82%;
+		right: 20%; 
+		transform: translateY(-50%);
+	}
+
+	.prev-arrow {
+		position: fixed;
+		top: 82%;
+		left: 20%; 
+		transform: translateY(-50%);
+	}
+}
