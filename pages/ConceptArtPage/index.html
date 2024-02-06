@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConceptArt-Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+
+    <div class="transparent-line">
+        <button class="first-button" onclick="window.location.href='../../index.html'">
+			Argyrios Savvas
+		</button>
+
+		<button>Concept Art</button>
+
+		<button onclick="window.location.href='../../pages/DigitalArtPage/index.html'">
+			Digital Art
+		</button>
+
+		<button onclick="window.location.href='../../pages/IllustrationAndDesignPage/index.html'">
+			Illustration/Design
+		</button>
+
+		<button onclick="window.location.href='../../pages/SketchesPage/index.html'">
+			Sketches
+		</button>
+
+		<button onclick="window.location.href='../../pages/AboutPage/index.html'">
+			About
+		</button>
+    </div>
+	
+    <button id="menu-icon" onclick="toggleNavigationButtons()">
+        <img src="../../materials/images/MenuButton.png" alt="Menu">
+    </button>
+
+    <button class="instagram-button" onclick="openInstagram()">
+        <img src="../../materials/images/InstaIcon2.png" alt="Instagram">
+    </button>
+
+    <header>
+        <h1>CONCEPT ART</h1>
+		<p>Selection of concept art and visual development work.</p>
+		
+		<div class="background-image"></div>
+		<div class="bottom-line"></div>
+    </header>
+
+    <main>
+		 <div class="concept-art-image">
+            <a href="pages/pr1/index.html" class="image-container1">
+                <img src="images/IMG1.png" alt="Concept Art 1">
+            </a>
+            <a href="pages/pr2/index.html" class="image-container2">
+                <img src="images/IMG2.png" alt="Concept Art 2">
+            </a>
+            <a href="pages/pr3/index.html" class="image-container3">
+                <img src="images/IMG3.png" alt="Concept Art 3">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 the_marahfa</p>
+    </footer>
+
+    <script>
+        function openInstagram() {
+            window.open('https://www.instagram.com/the_marahfa?igsh=MnZ0bjdzenNyZGNz', '_blank');
+        }
+		
+		function toggleNavigationButtons() {
+			console.log('Button pressed!');
+
+			const darkOverlay = document.createElement('div');
+			darkOverlay.classList.add('dark-overlay');
+
+			const buttonsContainer = document.createElement('div');
+			buttonsContainer.classList.add('buttons-container');
+
+			const button1 = document.createElement('a');
+			button1.textContent = 'Concept Art';
+
+			const button2 = document.createElement('a');
+			button2.textContent = 'Digital Art';
+			button2.href = '../../pages/DigitalArtPage/index.html';
+
+			const button3 = document.createElement('a');
+			button3.textContent = 'Illustration/Design';
+			button3.href = '../../pages/IllustrationAndDesignPage/index.html';
+
+			const button4 = document.createElement('a');
+			button4.textContent = 'Sketches';
+			button4.href = '../../pages/SketchesPage/index.html';
+
+			const button5 = document.createElement('a');
+			button5.textContent = 'About';
+			button5.href = '../../pages/AboutPage/index.html'; 
+
+			const closeButton = document.createElement('button');
+			const closeImg = document.createElement('img');
+			closeImg.src = '../../materials/images/CloseButton.png'; 
+			closeImg.alt = 'Close';
+			closeButton.appendChild(closeImg);
+			closeButton.classList.add('close-button');
+
+			buttonsContainer.appendChild(button1);
+			buttonsContainer.appendChild(button2);
+			buttonsContainer.appendChild(button3);
+			buttonsContainer.appendChild(button4);
+			buttonsContainer.appendChild(button5);
+			buttonsContainer.appendChild(closeButton);
+
+			darkOverlay.appendChild(buttonsContainer);
+
+			document.body.appendChild(darkOverlay);
+
+			closeButton.addEventListener('click', () => {
+			document.body.removeChild(darkOverlay);
+			});
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+		});
+    </script>
+</body>
+</html>

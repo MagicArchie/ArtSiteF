@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Tokyo/Interior</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+</head>
+
+<body>
+
+    <div class="transparent-line">
+        <button class="first-button" onclick="window.location.href='../../../../index.html'">
+			Argyrios Savvas
+		</button>
+
+		<button onclick="window.location.href='../../../../pages/ConceptArtPage/index.html'">
+			Concept Art
+		</button>
+
+		<button onclick="window.location.href='../../../../pages/DigitalArtPage/index.html'">
+			Digital Art
+		</button>
+
+		<button onclick="window.location.href='../../../../pages/IllustrationAndDesignPage/index.html'">
+			Illustration/Design
+		</button>
+
+		<button onclick="window.location.href='../../../../pages/SketchesPage/index.html'">
+			Sketches
+		</button>
+
+		<button onclick="window.location.href='../../../../pages/AboutPage/index.html'">
+			About
+		</button>
+    </div>
+
+    <button id="menu-icon" onclick="toggleNavigationButtons()">
+        <img src="../../../../materials/images/MenuButton.png" alt="Menu">
+    </button>
+
+    <button class="instagram-button" onclick="openInstagram()">
+        <img src="../../../../materials/images/InstaIcon2.png" alt="Instagram">
+    </button>
+
+    <header>
+        <h1>NEO TOKYO</h1>
+        <p>VR Irori - Interior Environment <br> Submisison for the ArtStation "Neo Tokyo: Exponential Reality" challenge.</p>
+		
+
+        <div class="background-image"></div>
+        <div class="bottom-line"></div>
+    </header>
+
+    <main>
+        <div id="slideshow-container">
+            <div class="slide">
+                <img src="images/IMG1.png" alt="Image 1">
+            </div>
+        </div>
+		
+		<img id="next-arrow" src="../../../../materials/images/N-Arrow.png" alt="Next" class="arrow next-arrow">
+		<img id="prev-arrow" src="../../../../materials/images/P-Arrow.png" alt="Previous" class="arrow prev-arrow">
+    </main>
+
+    <footer>
+        <p>&copy; 2024 the_marahfa</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        function openInstagram() {
+            window.open('https://www.instagram.com/the_marahfa?igsh=MnZ0bjdzenNyZGNz', '_blank');
+        }
+
+        function toggleNavigationButtons() {
+            console.log('Button pressed!');
+
+            const darkOverlay = document.createElement('div');
+            darkOverlay.classList.add('dark-overlay'); 
+
+            const buttonsContainer = document.createElement('div');
+            buttonsContainer.classList.add('buttons-container'); 
+
+            const button1 = document.createElement('a');
+            button1.textContent = 'Concept Art';
+            button1.href = '../../../../pages/ConceptArtPage/index.html';
+
+            const button2 = document.createElement('a');
+            button2.textContent = 'Digital Art';
+			button2.href = '../../../../pages/DigitalArtPage/index.html'; 
+
+            const button3 = document.createElement('a');
+            button3.textContent = 'Illustration/Design';
+            button3.href = '../../../../pages/IllustrationAndDesignPage/index.html'; 
+
+            const button4 = document.createElement('a');
+            button4.textContent = 'Sketches';
+            button4.href = '../../../../pages/SketchesPage/index.html'; 
+
+            const button5 = document.createElement('a');
+            button5.textContent = 'About';
+            button5.href = '../../../../pages/AboutPage/index.html'; 
+
+            const closeButton = document.createElement('button');
+            const closeImg = document.createElement('img');
+            closeImg.src = '../../../../materials/images/CloseButton.png'; 
+            closeImg.alt = 'Close';
+            closeButton.appendChild(closeImg);
+            closeButton.classList.add('close-button'); 
+
+            buttonsContainer.appendChild(button1);
+            buttonsContainer.appendChild(button2);
+            buttonsContainer.appendChild(button3);
+            buttonsContainer.appendChild(button4);
+            buttonsContainer.appendChild(button5);
+            buttonsContainer.appendChild(closeButton);
+
+            darkOverlay.appendChild(buttonsContainer);
+
+            document.body.appendChild(darkOverlay);
+
+            closeButton.addEventListener('click', () => {
+                document.body.removeChild(darkOverlay);
+            });
+        }
+    </script>
+</body>
+
+</html>
