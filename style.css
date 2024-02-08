@@ -170,10 +170,6 @@ footer {
         color: cyan;
     }
 
-    .transparent-line a {
-        display: none;
-    }
-
     footer {
         font-size: 3.5vw;
     }
@@ -181,8 +177,8 @@ footer {
     #menu-icon {
         display: block;
         position: fixed;
-        top: 7px;
-        right: 10px;
+        top: 3.5vw;
+        right: 2.5vw;
         background-color: transparent;
         border: none;
         padding: 0;
@@ -192,7 +188,7 @@ footer {
     }
 
     #menu-icon img {
-        width: 6.5vw;
+        width: 7.5vw;
     }
 
     #mobile-menu-btn:checked + .transparent-line a {
@@ -201,24 +197,6 @@ footer {
 
     .transparent-line {
         height: 6%;
-    }
-
-    .instagram-button {
-        position: fixed;
-        bottom: 1vw;
-        left: 10vw;
-        transform: translate(-46%, 0%);
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-    }
-
-    .instagram-button img {
-        width: 20%;
-    }
-
-    .transparent-line a {
         margin-right: 0;
         background-color: rgba(0, 0, 0, 0.6);
         text-align: center;
@@ -228,7 +206,16 @@ footer {
         transition: color 0.3s;
     }
 
-    .transparent-line a:hover {
+    .transparent-line button.first-button {
+        display: block;
+        font-size: 5vw;
+    }
+
+    .transparent-line button:not(.first-button) {
+        display: none;
+    }
+
+    .transparent-line button:hover {
         color: cyan;
     }
 
@@ -288,4 +275,19 @@ footer {
     .buttons-container a:hover {
         color: cyan;
     }
+	
+	.instagram-button {
+		position: fixed;
+		bottom: 1vw;
+		left: 13vw;
+		transform: translate(-46%, 0%);
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+	}	
+	
+	.instagram-button img {
+		width: 20vw;
+	}
 }
