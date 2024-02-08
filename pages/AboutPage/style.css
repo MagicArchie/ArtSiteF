@@ -152,7 +152,7 @@ footer {
 
     .transparent-line button {
         font-size: 4.5vw;
-        margin-top: 5px;
+        margin-top: 15px;
     }
 
     .bottom-line {
@@ -221,8 +221,8 @@ footer {
     #menu-icon {
         display: block;
         position: fixed;
-        top: 7px;
-        right: 10px;
+        top: 3.5vw;
+        right: 2.5vw;
         background-color: transparent;
         border: none;
         padding: 0;
@@ -232,7 +232,7 @@ footer {
     }
 
     #menu-icon img {
-        width: 6.5vw;
+        width: 7.5vw;
     }
 
     #mobile-menu-btn:checked + .transparent-line a {
