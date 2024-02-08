@@ -14,10 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
         'images/IMG13.jpg',
         'images/IMG14.jpg',
         'images/IMG15.jpg',
-		'images/IMG16.jpg',
-		'images/IMG17.jpg',
-		'images/IMG18.jpg',
-		'images/IMG19.jpg'
+	'images/IMG16.jpg',
+	'images/IMG17.jpg',
+	'images/IMG18.jpg'
     ];
 
     const slideshowContainer = document.getElementById('slideshow-container');
